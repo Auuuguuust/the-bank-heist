@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The bank heist</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+
+<body>
+    <div id="start-screen" class="start-screen">
+        <div class="menu-container">
+            <h1>The bank heist</h1>
+            <h2>You're about to rob a bank! Try to not get caught by the police...</h2>
+            <button id="start">Start heist</button>
+        </div>
+    </div>
+
+    <div id="car-game-id" class="car-game no-display">
+        <div class="how-to-play">
+            <p>Drive the car to the bank using the ARROW KEYS.</p>
+        </div>
+        <img class="road-background" src="./assets/road-background.png" alt="">
+        <div>
+            <img id="car" src="./assets/car.svg" alt="">
+        </div>
+        <div id="police" class="police"><img src="./assets/police-car.svg" alt=""></div>
+    </div>
+
+    <div id="safe-minigame" class="safe-minigame hidden">
+
+        <div class="how-to-play">
+            <p>Hack into the safe by clicking on the keypad.</p>
+        </div>
+
+        <div>
+            <div class="red-light"></div>
+            <img class="siren" src="./assets/siren.svg" alt="">
+        </div>
+        
+        <div id="game-background" class="game-background hidden">
+            <div class="safe-game">
+                <div class="play-field">
+                    <div class="how-to-play">
+                        <p>Wrong number</p>
+                        <p class="yellow">Right number, wrong place</p>
+                        <p class="green">Right number, right place</p>
+                    </div>
+                    <div class="left code-interface">
+                        <input id="code-input" placeholder="0000" maxlength="4">
+                        
+                        <div class="first-row">
+                            <button class="code-button" value="1">1</button>
+                            <button class="code-button" value="2">2</button>
+                            <button class="code-button" value="3">3</button>
+                        </div>
+
+                        <div class="second-row">
+                            <button class="code-button" value="4">4</button>
+                            <button class="code-button" value="5">5</button>
+                            <button class="code-button" value="6">6</button>
+                        </div>
+                    
+                        <div class="third-row">
+                            <button class="code-button" value="7">7</button>
+                            <button class="code-button" value="8">8</button>
+                            <button class="code-button" value="9">9</button>
+                        </div>
+
+                        <div class="fourth-row">
+                            <button id="backspace">❌</button>
+                            <button class="code-button" value="0">0</button>
+                            <button id="check-input">✔️</button>
+                        </div>
+
+                        <button id="close-button">X</button>
+                    </div>
+
+                    <div class="right">
+                        <div id="codes"></div>
+                        <h2 class="tries-counter">Tries left: <count id="tries-left">5</count></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="safe">
+            <div class="safe-container">
+                <img id="safe-closed" src="./assets/safe-closed.svg" alt="">
+                <img class="no-display" id="safe-open" src="./assets/safe-open.svg" alt="">
+                <img class="no-display" id="money" src="./assets/money.svg" alt="">
+            </div>
+            <div class="keypad-container">
+                <img id="keypad" src="./assets/keypad.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over" class="hidden">
+        <div>
+            <h2>Game over!</h2>
+            <h3>You got busted!</h3>
+            <h3 id="show-code"></h3>
+            <button id="restart">Try again</button>
+        </div>
+    </div>
+
+    <div id="win-screen" class="hidden">
+        <div class="row">
+            <p class="money-emoji">💸</p>
+            <div class="text-align">
+                <h2>You robbed the bank!</h2>
+                <h3>You're a millionaire now!</h3>
+            </div>
+            <p class="money-emoji">💸</p>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

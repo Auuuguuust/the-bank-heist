@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 431.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #12b700;
+      }
+
+      .cls-2 {
+        fill: #333;
+      }
+
+      .cls-3 {
+        fill: gray;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <rect class="cls-3" width="304" height="431.22"/>
+      <rect class="cls-1" x="24.89" y="27.17" width="254.22" height="73.78"/>
+      <rect class="cls-2" x="24.89" y="142.61" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="115.11" y="142.61" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="205.33" y="142.28" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="24.89" y="231.5" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="115.11" y="231.5" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="205.33" y="231.17" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="24.89" y="320.72" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="115.11" y="320.72" width="73.78" height="73.78"/>
+      <rect class="cls-2" x="205.33" y="320.39" width="73.78" height="73.78"/>
+    </g>
+  </g>
+</svg>

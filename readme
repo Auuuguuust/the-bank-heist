@@ -1,0 +1,23 @@
+"The Bank Heist" is een interactieve browsergame waarin de speler in de huid kruipt van een bankrover. Het doel is om succesvol een bank te beroven zonder gepakt te worden door de politie. De game bestaat uit twee fasen, waarin spelers verschillende uitdagingen moeten overwinnen.
+
+De game bestaat uit twee minigames:
+
+1. Autorit naar de bank (Auto Minigame)
+
+De speler bestuurt een vluchtauto naar de bank met de pijltjestoetsen en probeert niet te botsen met de politiewagen.
+
+2. Kluis kraken (Safe Minigame)
+
+De speler moet een "hacken" in een kluis door willekeurige cijfers in te voeren.
+
+Als een van de cijfers een kleur krijgt wil dit het volgende zeggen:
+
+Geen kleur = Fout nummer
+
+Oranje kleur = Juist nummer, verkeerde plek
+
+Groene kleur = Juist nummer, juiste plek
+
+Als de speler de code raadt binnen de 5 pogingen, opent de kluis en kan je het geld stelen. Lukt dit niet, dan moet de speler opnieuw proberen.
+
+FIGMA FILE: https://www.figma.com/design/jlUlvCzebmOGxZiV21WIws/Untitled?node-id=0-1&t=NwxmMyvbkrC3eDZl-1

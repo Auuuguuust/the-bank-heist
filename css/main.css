@@ -1,0 +1,444 @@
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+}
+
+button {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    width: 33%;
+    margin: 0.1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 2.5rem;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+input {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: right;
+    margin: 0rem 0.2rem 1rem 0.2rem;
+    height: 5rem;
+    width: 100%;
+    background-color: hsl(120, 61%, 50%);
+}
+
+span {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-size: 3rem;
+    background-color: hsl(0, 0%, 20%);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: hsl(0, 0%, 100%);
+    height: 100%;
+    border-radius: 0.1rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.start-screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/startscreen-background.jpeg);
+    background-size: cover;
+    color: hsl(0, 0%, 100%);
+}
+
+.menu-container {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 3rem;
+}
+
+.menu-container  h2 {
+    margin-top: 2rem;
+}
+
+.how-to-play {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    padding: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 1rem;
+    border: solid;
+}
+
+.car-game {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: hsl(0, 0%, 40%);
+    background-size: cover;
+    background-position: center;
+    background-repeat:repeat-x;
+}
+
+.road-background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.police {
+    position: absolute;
+    width: 5vw;
+    left: 45%;
+    right: 45%;
+    animation-name: police;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes police {
+    0% {top: 0%; transform: rotate(0deg);}
+    1% {transform: rotate(180deg);}
+    50% {top: 90%; transform: rotate(180deg)}
+    51% {transform: rotate(0deg);}
+    100% {top: 0%; transform: rotate(0deg);}
+}
+
+.safe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    gap: 4rem;
+}
+
+.game-background {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.safe-game {
+    width: 75%;
+    height: auto;
+    background-color: hsl(0, 0%, 45%);
+    padding: 1rem;
+    border: solid, 1.5rem, hsl(0, 0%, 0%);
+    border-style: outset;
+}
+
+.safe-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 65%;
+}
+
+.keypad-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.play-field {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right, .left {
+    width: 35%;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input-digits {
+    padding: 1rem;
+}
+
+.tries-counter {
+    position: absolute;
+    bottom: 0;
+}
+
+.green {
+    color: hsl(120, 100%, 50%);
+    font-style: bold;
+}
+
+.yellow {
+    color: hsl(60, 100%, 50%);
+    font-style: bold;
+}
+
+.first-row, .second-row, .third-row, .fourth-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.siren {
+    position: absolute;
+    z-index: 1;
+    width: 3rem;
+    left: 50%;
+    right: 49%;
+}
+
+.red-light {
+    position: fixed;
+    left: 1.6rem;
+    right: 0px;
+    top: -18.5vw;
+    border-top: 20vw solid transparent;
+    border-bottom: 20vw solid transparent;
+    
+    border-left: 50vw solid red;
+    border-right: 50vw solid red;
+
+
+    pointer-events: none;
+    opacity: 0.2;
+    z-index: 2;
+
+    animation-name: siren;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+}
+
+.money-emoji {
+    font-size: 5rem;
+}
+
+@keyframes siren {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+}
+
+#start {
+    margin-top: 10rem;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+}
+
+#start:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 0%);
+    border: solid, hsl(0, 0%, 100%), 1px;
+}
+
+#game-over {
+    font-size: 5rem;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 38%);
+    /* animation: police-light;
+    animation-iteration-count: infinite;
+    animation-duration: 2s; */
+}
+/* 
+@keyframes police-light {
+    0% {background-color: red;}
+    50% {background-color: blue;}
+    100% {background-color: red;}
+} */
+
+#win-screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(120, 100%, 39%);
+    z-index: 2;
+}
+
+#game-over h2, #win-screen h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 3rem;
+}
+
+#restart {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+#close-button {
+    width: 15%;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@keyframes grow {
+    0% {transform: scale(100%);}
+    50% {transform: scale(110%);}
+    100% {transform: scale(100%);}
+}
+
+#safe-closed {
+    max-height: 80vh;
+    border: solid, 1rem, black;
+    border-style: outset;
+}
+
+#money {
+    max-width: 45%;
+    position: absolute;
+    right: 11%;
+    bottom: 12%;
+
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grow {
+    0% {transform: scale(100%);}
+    50% {transform: scale(110%);}
+    100% {transform: scale(100%);}
+}
+
+#keypad {
+    max-height: 15vh;
+    border: solid, 1rem, black;
+    border-style: outset;
+}
+
+#car {
+    width: 5vw;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 50px;
+}
+
+@media (max-width: 1028px) {
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+
+    input {
+        font-size: 3rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+
+    .how-to-play {
+        font-size: 1rem;
+    }
+
+    .safe-game {
+        width: 90%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+
+    .menu-container {
+        width: 90%;
+    }
+
+    .menu-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .how-to-play {
+        font-size: 1rem;
+    }
+
+    .safe-game {
+        width: 90%;
+        height: 70%;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-display {
+    display: none;
+}
