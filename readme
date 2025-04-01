@@ -1,4 +1,4 @@
-"The Bank Heist" is een interactieve browsergame waarin de speler in de huid kruipt van een bankrover. Het doel is om succesvol een bank te beroven zonder gepakt te worden door de politie. De game bestaat uit twee fasen, waarin spelers verschillende uitdagingen moeten overwinnen.
+"The Bank Heist" is een interactieve browsergame, gemaakt met HTML, CSS en JS, waarin de speler in de huid kruipt van een bankrover. Het doel is om succesvol een bank te beroven zonder gepakt te worden door de politie. De game bestaat uit twee fasen, waarin spelers verschillende uitdagingen moeten overwinnen.
 
 De game bestaat uit twee minigames:
 
@@ -11,13 +11,24 @@ De speler bestuurt een vluchtauto naar de bank met de pijltjestoetsen en probeer
 De speler moet een "hacken" in een kluis door willekeurige cijfers in te voeren.
 
 Als een van de cijfers een kleur krijgt wil dit het volgende zeggen:
+    Geen kleur = Fout nummer
 
-Geen kleur = Fout nummer
+    Oranje kleur = Juist nummer, verkeerde plek
 
-Oranje kleur = Juist nummer, verkeerde plek
-
-Groene kleur = Juist nummer, juiste plek
+    Groene kleur = Juist nummer, juiste plek
 
 Als de speler de code raadt binnen de 5 pogingen, opent de kluis en kan je het geld stelen. Lukt dit niet, dan moet de speler opnieuw proberen.
 
 FIGMA FILE: https://www.figma.com/design/jlUlvCzebmOGxZiV21WIws/Untitled?node-id=0-1&t=NwxmMyvbkrC3eDZl-1
+GITHUB PAGES: https://auuuguuust.github.io/the-bank-heist/
+
+Alle code is zelf geschreven.
+
+Dit stukje code is gemaakt met de hulp van ChatGPT omdat ik er niet meer aan uit geraakte:
+    
+    if (
+         carPos.left < policePos.right &&
+        carPos.right > policePos.left &&
+         carPos.top < policePos.bottom &&
+        carPos.bottom > policePos.top
+    )
