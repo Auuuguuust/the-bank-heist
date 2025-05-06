@@ -271,7 +271,13 @@ h3 {
     width: 100%;
 }
 
-#start:hover {
+#mobile {
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+}
+
+#start:hover, #mobile:hover {
     color: hsl(0, 0%, 100%);
     background-color: hsl(0, 0%, 0%);
     border: solid, hsl(0, 0%, 100%), 1px;

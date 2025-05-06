@@ -4,8 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameOverScreen = document.querySelector("#game-over");
     const restartButton = document.querySelector("#restart");
     const winScreen = document.querySelector("#win-screen");
+    const mobileButton = document.querySelector("#mobile");
 
     const cityLandscape = document.querySelector("#car-game-id");
+
+    mobileButton.addEventListener("click", function() {
+        startScreen.classList.add("no-display");
+        safeMiniGame.classList.remove("hidden");
+    });
 
     startButton.addEventListener("click", function() {
         startScreen.classList.add("no-display");
@@ -23,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const playingField = document.querySelector("#game-background");
     const safeMiniGame = document.querySelector("#safe-minigame");
 
-    
     let distanceUpDown = 0;
     let distanceLeftRight = 50;
 
@@ -80,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkInputButton = document.querySelector("#check-input");
     const backspaceButton = document.querySelector("#backspace");
     const triedCodes = document.querySelector("#codes");
-    const triesLeftElement = document.querySelector("#tries-left")
+    const triesLeftElement = document.querySelector("#tries-left");
     const keyPad = document.querySelector("#keypad");
     const closeButton = document.querySelector("#close-button");
     const showCode = document.querySelector("#show-code");
