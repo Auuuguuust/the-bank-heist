@@ -429,7 +429,8 @@ h3 {
     }
 
     .code-button {
-        padding: 0.2rem;
+        padding: 1rem;
+        width: 100%;
     }
 
     .menu-container {
@@ -453,12 +454,19 @@ h3 {
         font-size: 1rem;
     }
 
+    .right {
+        margin-left: 5rem;
+    }
+
     #backspace, #check-input {
-        padding: 0.2rem;
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem 1.8rem 1rem 0.8rem;
     }
 
     #code-input {
         height: 2rem;
+        width: 9rem;
     }
 
     #keypad {
