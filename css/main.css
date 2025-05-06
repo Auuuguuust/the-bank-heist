@@ -445,6 +445,7 @@ h3 {
 
     .how-to-play {
         font-size: 1rem;
+        margin-bottom: 3rem;
     }
 
     /* .safe {
@@ -492,6 +493,10 @@ h3 {
     #safe-closed {
         scale: 120%;
         margin-left: 2rem;
+    }
+
+    .row {
+        scale: 85%;
     }
 }
 
