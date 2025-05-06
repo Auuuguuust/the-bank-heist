@@ -406,6 +406,10 @@ h3 {
 }
 
 @media (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+    
     h1 {
         font-size: 1.5rem;
         text-align: center;
@@ -421,6 +425,11 @@ h3 {
 
     span {
         font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .code-button {
+        padding: 0.2rem;
     }
 
     .menu-container {
@@ -437,7 +446,28 @@ h3 {
 
     .safe-game {
         width: 90%;
-        height: 70%;
+        height: 40%;
+    }
+
+    .tries-counter {
+        font-size: 1rem;
+    }
+
+    #backspace, #check-input {
+        padding: 0.2rem;
+    }
+
+    #code-input {
+        height: 2rem;
+    }
+
+    #keypad {
+        scale: 50%;
+    }
+
+    #safe-closed {
+        scale: 120%;
+        margin-left: 2rem;
     }
 }
 
