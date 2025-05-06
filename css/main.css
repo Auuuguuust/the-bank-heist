@@ -445,6 +445,11 @@ h3 {
         font-size: 1rem;
     }
 
+    .safe {
+        width: 110%;
+        height: 120%;
+    }
+
     .safe-game {
         width: 90%;
         height: 40%;
@@ -456,6 +461,10 @@ h3 {
 
     .right {
         margin-left: 5rem;
+    }
+
+    #game-background {
+        width: 110%;
     }
 
     #backspace, #check-input {
